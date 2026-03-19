@@ -9,7 +9,21 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-
+.website__name {
+  font-weight: 500;
+}
+.nav__form input {
+  width: 250px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  border: none;
+  background-color: #fff7d6d0;
+}
+.nav__form input:focus {
+  outline-style: solid;
+  outline-color: #a89032;
+}
 footer {
   background-color: #292524;
   color: white;
@@ -18,4 +32,19 @@ footer {
   align-items: center;
   font-size: 1.1rem;
   padding: 20px;
+}
+footer div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
 }
