@@ -2,13 +2,15 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-function App() {
+import { Outlet } from "react-router-dom";
+function SharedLayout() {
   return (
     <>
       <Navbar />
+      <Outlet />
       <Footer />
     </>
   );
 }
 
-export default App;
+export default SharedLayout;
