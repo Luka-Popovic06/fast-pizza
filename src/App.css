@@ -104,3 +104,17 @@ header h1 span {
   padding: 20px 40px;
   border-radius: 30px;
 }
+.nav-link {
+  font-size: 1.2rem;
+  padding: 20px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: #facc15;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #292524;
+}
+.nav-link:hover {
+  transition: 0.3s;
+  background-color: #d8b424;
+}
