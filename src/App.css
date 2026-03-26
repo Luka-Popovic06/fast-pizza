@@ -104,6 +104,12 @@ header h1 span {
   padding: 20px 40px;
   border-radius: 30px;
 }
+.btn--medium {
+  padding: 5px 30px;
+  height: 40px;
+  font-size: 1rem;
+  border-radius: 30px;
+}
 .nav-link {
   font-size: 1.2rem;
   padding: 20px 40px;
@@ -117,4 +123,19 @@ header h1 span {
 .nav-link:hover {
   transition: 0.3s;
   background-color: #d8b424;
+}
+.pizza-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.pizza-list__item {
+  display: flex;
+}
+.pizza-img {
+  width: 9rem;
+  height: 9rem;
+  background-color: aqua;
 }
