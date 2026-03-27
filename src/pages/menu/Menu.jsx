@@ -8,7 +8,7 @@ const Menu = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const name = useSelector((state) => state.username.name);
-  const data = useSelector((state) => state.menu.menu);
+  const pizzaData = useSelector((state) => state.menu.menu);
 
   useEffect(() => {
     if (!name) {
@@ -16,12 +16,19 @@ const Menu = () => {
     }
     dispatch(fetchMenu());
   }, [name]);
-  console.log(data);
+  console.log(pizzaData);
 
   return (
     <ul className="pizza-list">
-      {/**ovde id e lista pizza */}
-      <PizzaItemCard />
+      {pizzaData?.data?.map((pizza) => (
+        <PizzaItemCard
+          key={pizza.id}
+          img={pizza?.imageUrl}
+          price={pizza?.unitPrice}
+          name={pizza?.name}
+          ingredients={pizza?.ingredients}
+        />
+      ))}
     </ul>
   );
 };

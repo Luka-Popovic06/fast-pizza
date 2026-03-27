@@ -130,12 +130,6 @@ header h1 span {
   align-items: center;
   justify-content: center;
   list-style: none;
-}
-.pizza-list__item {
-  display: flex;
-}
-.pizza-img {
-  width: 9rem;
-  height: 9rem;
-  background-color: aqua;
+  margin-top: 20px;
+  gap: 30px;
 }
