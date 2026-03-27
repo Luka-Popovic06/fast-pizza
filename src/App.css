@@ -133,3 +133,32 @@ header h1 span {
   margin-top: 20px;
   gap: 30px;
 }
+.pizza-list__item {
+  display: grid;
+  grid-template-columns: 160px 470px 210px;
+  grid-template-rows: 1fr;
+}
+.pizza-list__info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.1rem;
+}
+.pizza-ingredients {
+  font-style: italic;
+  color: #454545;
+}
+.pizza-list__info div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pizza-list__item button {
+  align-self: flex-end;
+}
+.pizza-img {
+  width: 9rem;
+  height: 9rem;
+  background-color: aqua;
+}
