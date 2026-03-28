@@ -110,6 +110,7 @@ header h1 span {
   font-size: 1rem;
   border-radius: 30px;
 }
+
 .nav-link {
   font-size: 1.2rem;
   padding: 20px 40px;
@@ -132,13 +133,14 @@ header h1 span {
   list-style: none;
   margin-top: 20px;
   gap: 30px;
+  margin-bottom: 30px;
 }
 .pizza-list__item {
   display: grid;
   grid-template-columns: 160px 470px 210px;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto;
 }
-.pizza-list__info {
+.pizza-info-box {
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -149,16 +151,18 @@ header h1 span {
   font-style: italic;
   color: #454545;
 }
-.pizza-list__info div {
+.pizza-details {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 .pizza-list__item button {
-  align-self: flex-end;
+  align-self: center;
+  grid-row: 2/3;
 }
 .pizza-img {
   width: 9rem;
   height: 9rem;
   background-color: aqua;
+  grid-row: 1/3;
 }

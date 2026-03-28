@@ -7,11 +7,7 @@ const Button = ({ btnType, variation, children, clickAction }) => {
   else if (variation === "danger") btnClass = "btn--danger";
 
   return (
-    <button
-      type={btnType}
-      onClick={() => clickAction}
-      className={`btn ${btnClass}`}
-    >
+    <button type={btnType} onClick={clickAction} className={`btn ${btnClass}`}>
       {children}
     </button>
   );

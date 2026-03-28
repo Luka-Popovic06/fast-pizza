@@ -7,20 +7,20 @@ import PizzaItemCard from "./PizzaItemCard";
 const Menu = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const name = useSelector((state) => state.username.name);
-  const pizzaData = useSelector((state) => state.menu.menu);
+  const selectName = useSelector((state) => state.username.name);
+  const selectPizzaData = useSelector((state) => state.menu.menu);
 
   useEffect(() => {
-    if (!name) {
+    if (!selectName) {
       navigate("/");
     }
     dispatch(fetchMenu());
-  }, [name]);
-  console.log(pizzaData);
+  }, [selectName]);
+  console.log(selectPizzaData);
 
   return (
     <ul className="pizza-list">
-      {pizzaData?.data?.map((pizza) => (
+      {selectPizzaData?.data?.map((pizza) => (
         <PizzaItemCard
           key={pizza.id}
           img={pizza?.imageUrl}
