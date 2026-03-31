@@ -15,3 +15,18 @@ export const selectTotalPizzasQuantity = createSelector(
     return totalQuantity;
   },
 );
+
+export const selectTotalPriceOfPizzas = createSelector(
+  [(state) => state.cart.pizzas],
+  (pizzas) => {
+    let totalPrice = 0;
+    for (const pizzaName in pizzas) {
+      const pizzasArray = pizzas[pizzaName];
+      totalPrice += pizzasArray.reduce(
+        (total, currentValue) => (total += currentValue),
+        0,
+      );
+    }
+    return totalPrice;
+  },
+);
