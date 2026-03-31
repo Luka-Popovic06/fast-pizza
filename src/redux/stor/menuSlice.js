@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchMenu } from "./api";
+import { fetchMenu } from "../api/api";
+
 const menuSlice = createSlice({
   name: "menu",
   initialState: {

@@ -2,7 +2,7 @@ import Button from "../../components/Button";
 import { useNavigate, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
-import { addUsername } from "../../stor/usernameSlice";
+import { addUsername } from "../../redux/stor/usernameSlice";
 
 const HomePage = () => {
   const [inputValue, setInputValue] = useState("");
