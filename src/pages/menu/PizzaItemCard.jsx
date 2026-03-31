@@ -29,6 +29,40 @@ const PizzaItemCard = ({ img, name, price, ingredients, soldOut }) => {
           <p>{name}</p>
           <p className="pizza-ingredients">{ingredients.join(", ")}</p>
         </div>
+        {pizzaQuantity > 0 && (
+          <div className="pizza-quantity-box">
+            <Button
+              btnType={"button"}
+              variation={"secondary"}
+              clickAction={() => dispatch(removePizza(name))}
+            >
+              -
+            </Button>
+
+            <p className="pizza-quantity">{pizzaQuantity}</p>
+            <Button
+              btnType={"button"}
+              variation={"secondary"}
+              clickAction={() =>
+                dispatch(
+                  addPizza({
+                    name: name,
+                    price: price,
+                  }),
+                )
+              }
+            >
+              +
+            </Button>
+            <Button
+              btnType={"button"}
+              variation={"primary-medium"}
+              clickAction={() => dispatch(removeAllOfPizza(name))}
+            >
+              DELETE
+            </Button>
+          </div>
+        )}
       </div>
       {!soldOut ? (
         <p
