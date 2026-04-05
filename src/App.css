@@ -267,3 +267,25 @@ header h1 span {
   justify-content: flex-start;
   gap: 40px;
 }
+.set-order {
+  background-color: #facc15;
+  transition: 0.3s;
+  padding: 11px 50px;
+  border-radius: 40px;
+  font-size: 1.2rem;
+}
+.set-order:hover {
+  background-color: #ddb515;
+}
+.clear-cart {
+  background-color: #cdcdcd;
+  transition: 0.3s;
+  padding: 15px 50px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.clear-cart:hover {
+  background-color: #b5b5b5;
+}
