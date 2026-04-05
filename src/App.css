@@ -32,13 +32,16 @@ footer {
   align-items: center;
   font-size: 1.1rem;
   padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 97.5%;
 }
 footer div {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-footer button {
+footer a {
   border: none;
   background-color: transparent;
   color: white;
@@ -47,6 +50,7 @@ footer button {
   align-items: center;
   gap: 5px;
   cursor: pointer;
+  text-decoration: none;
 }
 .home {
   display: flex;
@@ -205,9 +209,9 @@ header h1 span {
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg); /* početni ugao */
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg); /* puni krug */
+    transform: rotate(360deg);
   }
 }

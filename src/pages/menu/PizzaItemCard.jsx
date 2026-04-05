@@ -6,16 +6,11 @@ import {
   removeAllOfPizza,
 } from "../../redux/stor/cartSlice";
 import { useSelector } from "react-redux";
-import {
-  selectPizzaQuantityByName,
-  selectTotalPriceOfPizzas,
-} from "../../redux/selectors";
+import { makeSelectPizzaQuantityByName } from "../../redux/selectors";
 
 const PizzaItemCard = ({ img, name, price, ingredients, soldOut }) => {
   const dispatch = useDispatch();
-  const pizzaQuantity = useSelector((state) =>
-    selectPizzaQuantityByName(state, name),
-  );
+  const pizzaQuantity = useSelector(makeSelectPizzaQuantityByName(name));
 
   return (
     <li className="pizza-list__item">

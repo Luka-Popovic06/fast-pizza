@@ -36,6 +36,7 @@ const HomePage = () => {
             type="text"
             id="username"
             placeholder="Your full name"
+            required
             onChange={(e) => setInputValue(e.target.value)}
           />
           <Button type={"submit"} variation={"primary"}>

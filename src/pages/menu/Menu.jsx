@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { data, useNavigate } from "react-router-dom";
 import { fetchMenu } from "../../redux/api/api";
 import PizzaItemCard from "./PizzaItemCard";
-import { createSelector } from "@reduxjs/toolkit";
 
 const Menu = () => {
   const dispatch = useDispatch();
@@ -11,8 +10,6 @@ const Menu = () => {
   const selectName = useSelector((state) => state.username.name);
   const selectPizzaData = useSelector((state) => state.menu.menu);
   const [isLoading, setIsLoading] = useState(true);
-  const pizz = useSelector((state) => state.cart.pizzas);
-  console.log(selectPizzaData?.data);
 
   useEffect(() => {
     if (!selectName) {
@@ -26,7 +23,6 @@ const Menu = () => {
     const timer = setTimeout(() => setIsLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
-  const lol = "king";
 
   return isLoading ? (
     <div className="loader-box">

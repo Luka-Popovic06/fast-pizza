@@ -1,18 +1,18 @@
 import { FaArrowRight } from "react-icons/fa6";
-import { selectTotalPriceOfPizzas } from "../redux/selectors";
-const Footer = () => {
-  const total = useSelector((state) => selectTotalPriceOfPizzas(state));
-
-  console.log(total);
+import { selectTotalPizzasQuantity } from "../redux/selectors";
+import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+const Footer = ({ total }) => {
+  const quantity = useSelector(selectTotalPizzasQuantity);
   return (
     <footer>
       <div>
-        <p className="prodacts__number">2</p>
+        <p className="prodacts__number">{quantity}</p>
         <p className="total__price">{total.toFixed(2)}$</p>
       </div>
-      <button type="button">
+      <NavLink type="button" to={"/cart"}>
         OPEN CART <FaArrowRight />
-      </button>
+      </NavLink>
     </footer>
   );
 };

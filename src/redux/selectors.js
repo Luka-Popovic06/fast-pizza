@@ -1,9 +1,12 @@
 import { createSelector } from "@reduxjs/toolkit";
 
-export const selectPizzaQuantityByName = createSelector(
-  [(state) => state.cart.pizzas, (state, pizzaName) => pizzaName],
-  (pizzas, name) => pizzas[name]?.length,
-);
+export const makeSelectPizzaQuantityByName = (name) => {
+  return createSelector(
+    [(state) => state.cart.pizzas],
+    (pizzas) => pizzas[name]?.length,
+  );
+};
+
 export const selectTotalPizzasQuantity = createSelector(
   (state) => state.cart.pizzas,
   (pizzas) => {
